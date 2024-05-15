@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
-// const authRoute = require("./src/routes/auth");
+const authRoute = require("./src/routes/auth");
 
 dotenv.config();
 app.use(express.json());
@@ -25,7 +25,7 @@ mongoose
 //   console.log("Hey this is shubham url");
 // });
 
-// app.use("/api/v1/auth", authRoute);
+app.use("/api/v1/auth", authRoute);
 
 // Creating Server
 app.listen(PORT, () => {
