@@ -3,7 +3,7 @@ const User = require("../models/user");
 const Post = require("../models/post");
 const bcrypt = require("bcrypt");
 
-// Update user
+// UPDATE USER
 router.put("/:id", async (req, res) => {
   if (req.body.userId === req.params.id) {
     if (req.body.password) {
@@ -27,7 +27,7 @@ router.put("/:id", async (req, res) => {
   }
 });
 
-// Delete user
+// DELETE USER
 router.delete("/:id", async (req, res) => {
   if (req.body.userId === req.params.id) {
     try {
@@ -47,7 +47,7 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
-// Get user
+// GET USER
 router.get("/:id", async (req, res) => {
   try {
     const user = await User.findById(req.params.id);
