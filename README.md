@@ -1,4 +1,4 @@
-# Node.js and Express.js Authentication API
+# Blog api backend
 
 This is a simple Node.js and Express.js application that provides authentication APIs, CRUD operations for posts, users and categories for blog app. It uses MongoDB for data storage.
 
