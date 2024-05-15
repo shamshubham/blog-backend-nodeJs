@@ -53,7 +53,7 @@ router.delete("/:id", async (req, res) => {
         res.status(500).json(err);
       }
     } else {
-      res.status(401).json("You can delete only your post");
+      res.status(401).json("You can delete only your post!");
     }
   } catch (err) {
     res.status(500).json(err);
@@ -66,7 +66,7 @@ router.get("/:id", async (req, res) => {
     const post = await Post.findById(req.params.id);
     res
       .status(200)
-      .json({ msg: `Here is your post by ${post.username}`, post });
+      .json({ msg: `Here is your post by ${post.username}!`, post });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -90,7 +90,7 @@ router.get("/", async (req, res) => {
       posts = await Post.find();
     }
     res.status(200).json({
-      msg: "Here are your posts by specific user or belong to specific category",
+      msg: "Here are your posts by specific user or belong to specific category!",
       posts,
     });
   } catch (err) {
